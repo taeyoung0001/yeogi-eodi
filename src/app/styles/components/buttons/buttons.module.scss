@@ -1,0 +1,31 @@
+.button-wrap {
+  width: 100%;
+
+  .button {
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 4px;
+    outline: none;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: rgb(144, 220, 144);
+    color: white;
+
+    &:hover {
+      background-color: rgb(12, 250, 87);
+    }
+  }
+
+  .button.large {
+    // ✅ 올바른 구조
+    padding: 10px 20px;
+    font-size: 20px;
+
+    &:hover {
+      background-color: rgb(0, 0, 0);
+    }
+  }
+}
