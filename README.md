@@ -1,36 +1,16 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+## 프로젝트 진행 이유
 
-## Getting Started
+여행에 관심이 많은 저로써는 유명한 국기들만 알고 있습니다.
+국기에 대해서 관심이 많아서 학습용으로 만들었습니다.
 
-First, run the development server:
+## 개요
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+국기 검색
+국기 찾기 게임 해보기
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+1. 국기 이미지가 나오면 국가 주관식으로 맞추기
+2. 국기를 보고 4지선 다 맞추기
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 기타
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+공공api 외교부 국가∙지역별 국기 이미지 사용
