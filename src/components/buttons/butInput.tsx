@@ -17,7 +17,7 @@ type resultDateType = {
 export default function ButInput() {
   const [inputValue, setInputValue] = useState<string>("");
   const [resultDate, setResultData] = useState<resultDateType>();
-  const URL = `https://apis.data.go.kr/1262000/CountryFlagService2/getCountryFlagList2?serviceKey=n6K4o67H33VxfemdS5Qir84LHNJkkCEkJc7c%2Bxm%2Fa9Z8%2B9XjbY0FmNPXOe8o0vspvG1YJxoVh%2BQZfnVapXfX%2Fw%3D%3D&returnType=JSON&numOfRows=1&cond[country_nm::EQ]=${inputValue}&pageNo=1`;
+  const URL = `https://apis.data.go.kr/1262000/CountryFlagService2/getCountryFlagList2?serviceKey=${process.env.NEXT_PUBLIC_API_KEY}&returnType=JSON&numOfRows=1&cond[country_nm::EQ]=${inputValue}&pageNo=1`;
 
   const inputData = (e: ChangeEvent<HTMLInputElement>) => {
     console.log(e.target.value);
