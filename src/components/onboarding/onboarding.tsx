@@ -1,4 +1,4 @@
-import styles from "@/app/styles/components/onboarding/onboarding.module.scss";
+import styles from "@/styles/components/onboarding/onboarding.module.scss";
 import cn from "classnames/bind";
 import BtnBox from "./btnBox";
 

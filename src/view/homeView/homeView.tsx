@@ -1,5 +1,5 @@
-import Onboarding from "@/app/components/onboarding/onboarding";
-import styles from "@/app/styles/view/homeView.module.scss";
+import Onboarding from "@/components/onboarding/onboarding";
+import styles from "@/styles/viewStyles/homeView.module.scss";
 import cn from "classnames/bind";
 const cx = cn.bind(styles);
 export default function HomeView() {

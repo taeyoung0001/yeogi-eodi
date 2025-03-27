@@ -1,6 +1,6 @@
 "use client";
 
-import styles from "@/app/styles/components/buttons/buttons.module.scss";
+import styles from "@/styles/components/buttons/buttons.module.scss";
 import cn from "classnames/bind";
 
 const cx = cn.bind(styles);
