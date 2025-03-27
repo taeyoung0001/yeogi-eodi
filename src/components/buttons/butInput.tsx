@@ -2,17 +2,9 @@
 //프로젝트 규모 가 작아서 별도로 크게 분리하지 않았음
 "use client";
 
+import { resultDateType } from "@/type/datatype";
 import Image from "next/image";
 import { ChangeEvent, useState } from "react";
-
-type resultDateType = {
-  content_ty: null | string;
-  country_eng_nm: string;
-  country_iso_alp2: string;
-  country_nm: string;
-  download_url: string;
-  origin_file_nm: string;
-};
 
 export default function ButInput() {
   const [inputValue, setInputValue] = useState<string>("");
@@ -64,8 +56,8 @@ export default function ButInput() {
           <Image
             src={resultDate.download_url}
             alt="국기"
-            width={200} // 이미지 크기 설정
-            height={120} // 이미지 크기 설정
+            width={200}
+            height={120}
           />
         </div>
       ) : (
