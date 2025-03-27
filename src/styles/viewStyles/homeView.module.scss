@@ -1,7 +1,56 @@
-.homeview {
-  height: 100vh;
+%styles {
   display: flex;
-  justify-content: center;
   align-items: center;
+  height: 100vh;
+}
+
+.homeview {
+  @extend %styles;
+  justify-content: center;
   border: 1px solid orchid;
+
+  .onboard-wrap {
+    @extend %styles;
+    max-width: 400px;
+    width: 100%;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+    h2 {
+      text-align: center;
+      color: rgb(0, 0, 0);
+      padding-top: 20px;
+      padding-bottom: 60px;
+      animation: 위아래 2s infinite;
+    }
+  }
+
+  .btnBox-wrap {
+    @extend %styles;
+    width: 100%;
+    min-width: 312px;
+    max-width: 380px;
+    gap: 20px;
+    justify-content: space-between;
+    padding: 0px 40px;
+  }
+
+  @keyframes 위아래 {
+    0% {
+      transform: translateY(0px);
+    }
+    20% {
+      transform: rotate(-3deg);
+    }
+    40% {
+      transform: translateY(0px);
+    }
+    60% {
+      transform: rotate(3deg);
+    }
+    80% {
+      transform: translateY(0px);
+    }
+  }
 }

@@ -3,7 +3,7 @@
 import styles from "@/styles/components/onboarding/onboarding.module.scss";
 import cn from "classnames/bind";
 import { useRouter } from "next/navigation";
-import Button from "../buttons/button";
+import Button from "./buttons/button";
 
 const cx = cn.bind(styles);
 export default function BtnBox() {
