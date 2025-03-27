@@ -6,6 +6,10 @@ import { resultDateType } from "@/type/datatype";
 import Image from "next/image";
 import { ChangeEvent, useState } from "react";
 
+import styles from "@/styles/components/buttons/butInput.module.scss";
+import cn from "classnames/bind";
+const cx = cn.bind(styles);
+
 export default function ButInput() {
   const [inputValue, setInputValue] = useState<string>("");
   const [resultDate, setResultData] = useState<resultDateType>();
@@ -19,6 +23,10 @@ export default function ButInput() {
   const submitHandler = () => {
     const searchData = async () => {
       try {
+        if (inputValue == "미국") {
+          setInputValue("미합중국으로 검색해보세요!");
+        }
+
         const response = await fetch(URL);
         const data = await response.json();
         const item = data.response.body.items.item[0];
@@ -38,30 +46,39 @@ export default function ButInput() {
   };
 
   return (
-    <div>
-      <input
-        onKeyDown={handleKeyDown}
-        type="text"
-        onChange={inputData}
-        value={inputValue}
-      />
-      <button onClick={submitHandler} type="button">
-        검색하기
-      </button>
+    <div className={cx("butInput-wrap")}>
+      <div className={cx("header")}>
+        {" "}
+        <input
+          className={cx("input")}
+          onKeyDown={handleKeyDown}
+          type="text"
+          onChange={inputData}
+          value={inputValue}
+        />
+        <button className={cx("btn")} onClick={submitHandler} type="button">
+          검색하기
+        </button>
+      </div>
+
       {resultDate ? (
-        <div>
+        <div className={cx("content-wrap")}>
           {" "}
-          {resultDate.country_nm}
-          {resultDate.country_eng_nm}
-          <Image
-            src={resultDate.download_url}
-            alt="국기"
-            width={200}
-            height={120}
-          />
+          <p>검색한 국가 : {resultDate.country_nm} </p>
+          <p>영어 이름 : {resultDate.country_eng_nm} </p>
+          <div className={cx("flag")}>
+            {" "}
+            <Image
+              style={{ borderRadius: "40px" }}
+              src={resultDate.download_url}
+              alt="국기"
+              width={220}
+              height={180}
+            />
+          </div>
         </div>
       ) : (
-        <p>하이</p>
+        <p className={cx("none-data")}>국가를 검색해 주세요</p>
       )}
     </div>
   );
