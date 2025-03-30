@@ -2,6 +2,7 @@
 
 import { Gamedata } from "@/type/datatype";
 import { useRouter } from "next/navigation";
+
 import { useState } from "react";
 
 export default function AnswerExBox(props: Gamedata) {
@@ -9,19 +10,16 @@ export default function AnswerExBox(props: Gamedata) {
 
   console.log(answerEx);
   const [correctCount, setCorrectCount] = useState(0);
-
   const router = useRouter();
   const clickHandler = (a: string) => {
-    console.log("답", a);
-    console.log(data?.country_nm);
     if (a !== data?.country_nm) {
-      alert(`오답이에요. 정답은 ${data?.country_nm} 입니다.`);
+      alert(`오답이에요.!! 정답은 ${data?.country_nm} 입니다.`);
       setCorrectCount(0);
-      router.refresh();
+      router.replace("/game");
     } else {
       alert("정답!");
       setCorrectCount((prev) => prev + 1);
-      router.refresh();
+      router.replace("/game");
     }
   };
 
