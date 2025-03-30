@@ -15,9 +15,9 @@ export default function AnswerExBox(props: Gamedata) {
     console.log("답", a);
     console.log(data?.country_nm);
     if (a !== data?.country_nm) {
-      alert("오답이에요. 다시 도전하세요.");
-      router.refresh();
+      alert(`오답이에요. 정답은 ${data?.country_nm} 입니다.`);
       setCorrectCount(0);
+      router.refresh();
     } else {
       alert("정답!");
       setCorrectCount((prev) => prev + 1);
@@ -27,7 +27,7 @@ export default function AnswerExBox(props: Gamedata) {
 
   return (
     <div>
-      <p>{correctCount}</p>
+      <p>연속으로 맞추 갯수 : {correctCount}</p>
       <div>
         {answerEx.map((list, index) => {
           return (
