@@ -13,6 +13,7 @@ const cx = cn.bind(styles);
 export default function ButInput() {
   const [inputValue, setInputValue] = useState<string>("");
   const [resultDate, setResultData] = useState<resultDateType>();
+
   const URL = `https://apis.data.go.kr/1262000/CountryFlagService2/getCountryFlagList2?serviceKey=${process.env.NEXT_PUBLIC_API_KEY}&returnType=JSON&numOfRows=1&cond[country_nm::EQ]=${inputValue}&pageNo=1`;
 
   const inputData = (e: ChangeEvent<HTMLInputElement>) => {
@@ -48,7 +49,6 @@ export default function ButInput() {
   return (
     <div className={cx("butInput-wrap")}>
       <div className={cx("header")}>
-        {" "}
         <input
           className={cx("input")}
           onKeyDown={handleKeyDown}
@@ -63,11 +63,9 @@ export default function ButInput() {
 
       {resultDate ? (
         <div className={cx("content-wrap")}>
-          {" "}
           <p>검색한 국가 : {resultDate.country_nm} </p>
           <p>영어 이름 : {resultDate.country_eng_nm} </p>
           <div className={cx("flag")}>
-            {" "}
             <Image
               style={{ borderRadius: "40px" }}
               src={resultDate.download_url}
