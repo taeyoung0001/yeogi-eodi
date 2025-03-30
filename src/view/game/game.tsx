@@ -23,7 +23,7 @@ export default async function GamePage() {
     data,
     res[randomCount + 3],
     res[randomCount - 5],
-    res[randomCount + 30],
+    res[randomCount + 20],
   ];
 
   // console.log("----answerEx----", answerEx);
