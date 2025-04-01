@@ -11,5 +11,6 @@ export type resultDateType =
 
 export type Gamedata = {
   data: resultDateType;
-  answerEx: resultDateType[];
+  answerEx?: resultDateType[];
+  fetchData: () => void;
 };
