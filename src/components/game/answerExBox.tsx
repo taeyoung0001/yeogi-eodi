@@ -1,17 +1,14 @@
 "use client";
 
 import { Gamedata } from "@/type/datatype";
-import { useState } from "react";
+
 import styles from "@/styles/viewStyles/game.module.scss";
 import cn from "classnames/bind";
 
 const cx = cn.bind(styles);
 
 export default function AnswerExBox(props: Gamedata) {
-  const { answerEx, data, fetchData } = props;
-
-  console.log(answerEx);
-  const [correctCount, setCorrectCount] = useState(0);
+  const { answerEx, data, fetchData, setCorrectCount, correctCount } = props;
 
   const clickHandler = async (a: string) => {
     if (a !== data?.country_nm) {
@@ -20,7 +17,8 @@ export default function AnswerExBox(props: Gamedata) {
       setCorrectCount(0);
     } else {
       alert("정답!");
-      setCorrectCount((prev) => prev + 1);
+
+      setCorrectCount((prev: number) => prev + 1);
     }
 
     fetchData();

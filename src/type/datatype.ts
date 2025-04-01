@@ -13,4 +13,6 @@ export type Gamedata = {
   data: resultDateType;
   answerEx?: resultDateType[];
   fetchData: () => void;
+  correctCount: number;
+  setCorrectCount: React.Dispatch<React.SetStateAction<number>>;
 };

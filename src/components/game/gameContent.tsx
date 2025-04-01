@@ -15,6 +15,7 @@ export default function GameContent() {
   const [isdata, setIsData] = useState<resultDateType[]>([]);
   const [answer, setAnswer] = useState<resultDateType>();
   const [loading, setLoading] = useState(true);
+  const [correctCount, setCorrectCount] = useState(0);
 
   // ✅ fetchData 함수 생성
   const fetchData = async () => {
@@ -66,7 +67,13 @@ export default function GameContent() {
       <img src={answer?.download_url} alt="나라국기" />
 
       <div>
-        <AnswerExBox answerEx={isdata} data={answer} fetchData={fetchData} />
+        <AnswerExBox
+          answerEx={isdata}
+          data={answer}
+          fetchData={fetchData}
+          setCorrectCount={setCorrectCount}
+          correctCount={correctCount}
+        />
       </div>
     </div>
   );
