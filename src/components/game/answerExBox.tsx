@@ -43,6 +43,9 @@ export default function AnswerExBox(props: Gamedata) {
           );
         })}
       </div>
+      <div className={cx("homeMenu-box")}>
+        <button className={cx("home")}>홈으로 돌아가기</button>
+      </div>
     </div>
   );
 }

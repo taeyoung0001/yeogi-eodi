@@ -66,3 +66,27 @@
   align-items: center;
   justify-content: center;
 }
+.homeMenu-box {
+  padding: 0px 10px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.home {
+  margin-top: 20px;
+  width: 100%;
+  max-width: 380px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  border: 2px solid black;
+  border-radius: 10px;
+  background-color: rgb(192, 224, 192);
+  &:hover {
+    background-color: rgb(44, 44, 44);
+    cursor: pointer;
+    color: white;
+  }
+}
