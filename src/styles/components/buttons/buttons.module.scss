@@ -11,7 +11,7 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    background-color: rgb(144, 220, 144);
+    background-color: rgba(144, 220, 144, 0.5);
     color: white;
 
     &:hover {
@@ -20,7 +20,6 @@
   }
 
   .button.large {
-    // ✅ 올바른 구조
     padding: 10px 20px;
     font-size: 20px;
 

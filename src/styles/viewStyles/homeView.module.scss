@@ -17,10 +17,10 @@
     justify-content: center;
 
     .title {
-      font-size: 50px;
-      letter-spacing: 6px;
+      font-size: 30px;
+
       text-align: center;
-      color: #4a1f1f;
+      color: #948b8b;
       padding-top: 20px;
       padding-bottom: 60px;
       animation: 위아래 2s infinite;
@@ -32,16 +32,14 @@
     .img-down {
       animation: moveRight 4s linear infinite;
     }
-  }
 
-  .btnBox-wrap {
-    @extend %styles;
-    width: 100%;
-    min-width: 312px;
-    max-width: 380px;
-    gap: 20px;
-    justify-content: space-between;
-    padding: 0px 40px;
+    .btnBox-wrap {
+      @extend %styles;
+      width: 100%;
+      min-width: 312px;
+      max-width: 380px;
+      justify-content: center;
+    }
   }
 
   @keyframes 위아래 {

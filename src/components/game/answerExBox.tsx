@@ -4,10 +4,12 @@ import { Gamedata } from "@/type/datatype";
 
 import styles from "@/styles/viewStyles/game.module.scss";
 import cn from "classnames/bind";
+import { useRouter } from "next/navigation";
 
 const cx = cn.bind(styles);
 
 export default function AnswerExBox(props: Gamedata) {
+  const router = useRouter();
   const { answerEx, data, fetchData, setCorrectCount, correctCount } = props;
 
   const clickHandler = async (a: string) => {
@@ -27,6 +29,7 @@ export default function AnswerExBox(props: Gamedata) {
   return (
     <div className={cx("answerExBox")}>
       <p>연속으로 맞추 갯수 : {correctCount}</p>
+      <div className={cx("hint")}></div>
 
       <div className={cx("button-wrap")}>
         {answerEx?.map((list, index) => {
@@ -44,7 +47,10 @@ export default function AnswerExBox(props: Gamedata) {
         })}
       </div>
       <div className={cx("homeMenu-box")}>
-        <button className={cx("home")}>홈으로 돌아가기</button>
+        {" "}
+        <button onClick={() => router.push("/")} className={cx("home")}>
+          홈으로 돌아가기
+        </button>
       </div>
     </div>
   );
